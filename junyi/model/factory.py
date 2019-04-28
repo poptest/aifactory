@@ -13,7 +13,7 @@ class Factory():
         #TODO 返回操作结果的状态：是否成功，返回新增工厂的编号
         # 成功：True, 1001
         # 失败：False，None
-        pass
+        return("Factory-> add")
 
     @classmethod
     def search_all(cls):
@@ -21,6 +21,8 @@ class Factory():
         #TODO 获取所有工厂的列表
         pass
         #TODO 返回所有工厂的列表
+
+        return ("Factory-> search_all")
 
     @classmethod
     def search_by_no(cls, no):
@@ -30,9 +32,9 @@ class Factory():
     @classmethod
     def delete_by_no(cls, no):
         #根据工厂编号删除指定工厂信息
-        pass
+        return ("Factory-> delete_by_no")
 
     @classmethod
     def modify(cls, no, name, city, address, contact, tel, worker):
         #根据工厂编号修改指定工厂的信息
-        pass
+        return ("Factory-> modify")
