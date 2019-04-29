@@ -17,16 +17,17 @@ def factory_add():
     if request.method=="GET":
         return render_template("factory.html")
     else:
-        No=request.form.get('No')
-        Facory_Name=request.form.get('Facory_Name')
-        City=request.form.get('City')
-        Address=request.form.get('Address')
-        Contact=request.form.get('Contact')
-        Tel=request.form.get('Tel')
-        Worker=request.form.get('Worker')
-        Status=request.form.get('Status')
-        msg="NO->%s | Facory_Name->%s | City->%s | Address->%s | Contact->%s | Tel->%s | Worker->%s | Status->%s"%(No, Facory_Name, City, Address, Contact, Tel, Worker, Status)
-        return msg
+        return render_template("factory_success.html")
+        # No=request.form.get('No')
+        # Facory_Name=request.form.get('Facory_Name')
+        # City=request.form.get('City')
+        # Address=request.form.get('Address')
+        # Contact=request.form.get('Contact')
+        # Tel=request.form.get('Tel')
+        # Worker=request.form.get('Worker')
+        # Status=request.form.get('Status')
+        # msg="NO->%s | Facory_Name->%s | City->%s | Address->%s | Contact->%s | Tel->%s | Worker->%s | Status->%s"%(No, Facory_Name, City, Address, Contact, Tel, Worker, Status)
+        # return msg
 
 
 # 查询所以工厂信息的网页
