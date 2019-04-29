@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="" method="post" >
+            <h1 align="center">工厂注册系统</h1>
+            <table align="center" border="1px" cellspacing="0px" width="50%" height="500px">
+                <tr>
+                    <td><font color="red">编号</font></td>
+                    <td>
+                        <input type="number" placeholder ="请输入编号" name="No"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font color="red">工厂名称</font></td>
+                    <td>
+                        <input type="text" placeholder ="请输入工厂名称" name="Facory_Name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font color="red">城市</font></td>
+                    <td>
+                        <select name="City">
+                            <option value="武汉">武汉</option>
+                            <option value="广东">广东</option>
+                            <option value="北京">北京</option>
+                            <option value="上海">上海</option>
+                            <option value="南京">南京</option>
+                            <option value="福建">福建</option>
+                            <option value="长沙">长沙</option>
+                            <option value="深圳">深圳</option>
+                            <option value="郑州">郑州</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font color="red">地址</font></td>
+                    <td>
+                        <textarea cols="50" rows="3" maxlength="50" placeholder ="请输入地址" name="Address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font color="red">联系人</font></td>
+                    <td>
+                        <input type="text" placeholder ="请输入联系人"  name="Contact"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font color="red">联系人电话</font></td>
+                    <td>
+                        <input type="number" maxlength="11" placeholder ="请输入联系电话" name="Tel"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font color="red">对接人</font></td>
+                    <td>
+                        <input type="text" placeholder ="请输入对接人" name="Worker"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><font color="red">账号状态</font></td>
+                    <td>
+                        <input type="radio" name="Status"  value="启用"/>启用
+                        <input type="radio" name="Status"  value="停用" checked/>停用
+                        <input type="radio" name="Status"  value="注销"/>注销
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="注册"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        <input type="reset" value="重置" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        <button>登录</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>
