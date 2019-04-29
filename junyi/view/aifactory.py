@@ -17,23 +17,16 @@ def factory_add():
     if req_method == 'GET':
         return render_template("factory_add.html")
     else:
-        no = "00001"
-        name = request.form.get("fac_name")
-        city = request.form.get("city")
-        address = request.form.get("address")
-        contact = request.form.get("contact")
-        tel = request.form.get("tel")
-        dj = request.form.get("dj")
-        status="1"
-        return render_template("factory_add_success.html",
-                               no=no,
-                               name=name,
-                               city=city,
-                               address=address,
-                               contact=contact,
-                               tel=tel,
-                               dj=dj,
-                               status=status)
+        factory_data = {}
+        factory_data["no"] = "00001"
+        factory_data["name"] = request.form.get("fac_name")
+        factory_data["city"] = request.form.get("city")
+        factory_data["address"] = request.form.get("address")
+        factory_data["contact"] = request.form.get("contact")
+        factory_data["tel"] = request.form.get("tel")
+        factory_data["dj"] = request.form.get("dj")
+        factory_data["status"] = "1"
+        return render_template("factory_add_success.html", factory_info=factory_data)
 
 @app.route("/factory/search/")
 def factory_search_all():
