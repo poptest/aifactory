@@ -7,7 +7,7 @@ class Factory():
 
     # 添加工厂信息的方法
     @classmethod
-    def factory_add(name, city, address, contact, tel, worer):
+    def factory_add(no, name, city, address, contact, tel, worer):
         # TODO 传入的数据根据工厂表的格式进行调整
         pass
 
