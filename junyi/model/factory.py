@@ -4,7 +4,7 @@
 class Factory():
 
     @classmethod
-    def add(cls, name, city, address, contact, tel, worker):
+    def add(cls, name, city, address, kcontact, tel, worer):
         #新增一个工厂
         #TODO 传入的数组按工厂数据格式进行整理
         pass
