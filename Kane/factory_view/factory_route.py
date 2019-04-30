@@ -60,5 +60,4 @@ def factory_modif_by_no(no):
     return (Factory.factory_modif_by_no())
 
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port="8888", debug=True)
+
