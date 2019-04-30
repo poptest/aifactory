@@ -1,19 +1,22 @@
 # -*- encoding:utf-8 -*-
 
+from junyi.db.factory_db import factory_list
 
 class Factory():
 
     @classmethod
-    def add(cls, name, city, address, kcontact, tel, worer):
+    def add(cls, factory_info):
         #新增一个工厂
-        #TODO 传入的数组按工厂数据格式进行整理
-        pass
+        # {"success":True, info:{工厂的信息字典，包括no，status}}
+        # {"success":False, info:"失败的原因"}
         #TODO 向现有工厂数据列表中插入新增的工厂数据
-        pass
-        #TODO 返回操作结果的状态：是否成功，返回新增工厂的编号
-        # 成功：True, 1001
-        # 失败：False，None
-        return("Factory-> add")
+        factory_list.append(factory_info)
+        factory_info['no'] = "00002"
+        factory_info['status'] = "1"
+        # ret = {"success": True, "info": factory_info}
+        ret = {"success": False, "info": "Tel error"}
+        return ret
+
 
     @classmethod
     def search_all(cls):

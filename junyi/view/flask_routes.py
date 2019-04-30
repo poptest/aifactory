@@ -18,15 +18,20 @@ def factory_add():
         return render_template("factory_add.html")
     else:
         factory_data = {}
-        factory_data["no"] = "00001"
         factory_data["name"] = request.form.get("fac_name")
         factory_data["city"] = request.form.get("city")
         factory_data["address"] = request.form.get("address")
         factory_data["contact"] = request.form.get("contact")
         factory_data["tel"] = request.form.get("tel")
         factory_data["dj"] = request.form.get("dj")
-        factory_data["status"] = "1"
-        return render_template("factory_add_success.html", factory_info=factory_data)
+
+        add_result = Factory.add(factory_data)
+        add_result_if_success = add_result['success']
+        add_result_info = add_result['info']
+        if add_result_if_success == True:
+            return render_template("factory_add_success.html", factory_info=add_result_info)
+        else:
+            return "Factory add error!, msg: %s" % add_result_info
 
 @app.route("/factory/search/")
 def factory_search_all():
